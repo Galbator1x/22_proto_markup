@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ООО Строй-Сервис-Монтаж
+{% endblock %}
+
+{% block additional_css %}
+<link href="css/company_detail.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class="navigation-links">
+  {% include 'logo.html' %}
+  <a href="index.html">Главная</a>
+  <i class="navigation-chevron"><i class="fa fa-chevron-right" aria-hidden="true"></i></i>
+  <a href="catalog_main.html">Каталог организаций</a>
+  <i class="navigation-chevron"><i class="fa fa-chevron-right" aria-hidden="true"></i></i>
+  <a href="catalog_main.html">ЖБИ</a>
+  <i class="navigation-chevron"><i class="fa fa-chevron-right" aria-hidden="true"></i></i>
+  <a href="#" class="inactive-link">ООО Строй-Сервис-Монтаж</a>
+</div>
+
+<div class="container">
+  <div class="company col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+    <div class="company-avatar"></div>
+    <h1 class="company-name">ООО Строй-Сервис-Монтаж</h1>
+    <div class="company-info col-xs-9 col-sm-9 col-md-7 col-lg-7">
+      <p><b>Место деятельности:</b> Новосибирск</p>
+      <p><b>Продукция:</b> ЖБИ, бетон</p>
+      <p><b>Адрес:</b> Под часами, на том-же месте</p>
+      <p><b>Телефон:</b> 00-00-00</p>
+    </div>
+    <a href="#" class="btn-send-proposal btn btn-lg btn-round-lg btn-primary btn-outline">
+      Оставить заявку<br>этой компании
+    </a>
+    <div class="company-text pull-left">
+      <p>Мы делаем</p>
+      <ul>
+        <li>Плиты</li>
+        <li>Перекрытия</li>
+        <li>Доставляем бесплатно</li>
+      </ul>
+      <p>Dolor tempora minima rerum assumenda eaque accusantium possimus exercitationem, doloribus non. Rem laborum labore itaque repudiandae nulla quaerat. Ipsum at praesentium ab labore sapiente nihil. Itaque reiciendis et fugit recusandae natus qui! Ipsum in quae recusandae sint consectetur? Est dolorem dolores delectus at esse eaque tenetur sit nostrum error expedita. Perferendis eos enim aliquid deleniti minima quo nam suscipit, quae nam eius odio asperiores sunt! Quasi maiores quam impedit ad.</p>
+      <br><p>Elit molestiae est voluptates ut quos vitae consectetur? Ab ipsam non autem fugit esse rerum dolores voluptas? Reprehenderit consequuntur eveniet atque nesciunt dignissimos obcaecati? Odio!</p>
+      <br><p>Elit vel modi nulla molestias placeat? Repudiandae ullam cumque voluptas earum dignissimos ipsum perferendis accusamus accusantium eligendi nihil praesentium? Labore totam amet facilis corrupti voluptas! Voluptatum facilis nemo quaerat voluptatum.</p>
+    </div>
+
+    <a href="#" class="link-send-proposal pull-left">
+      Оставить заявку этой компании
+    </a>
+  </div>
+  <h3 class="link-all-companies col-xs-12 col-sm-8 col-md-offset-1 col-md-8 col-lg-offset-2 col-lg-8">
+    <a href="catalog_main.html">Все организации Новосибирска и области</a>
+  </h3>
+</div>
+
+
+{% include 'footer.html' %}
+{% endblock %}

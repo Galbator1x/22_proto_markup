@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="members-links">
+      <p>Участники в Новосибирске:</p>
+      <a href="catalog_main.html">105 оптовых компаний</a>
+      <a href="catalog_main.html">25 производителей</a>
+    </div>
+  </div>
+</div>
+
+<p id="proposal-anchor"></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 container-proposal">
+      <p class="proposal-title">
+        Вам позвонят лучшие поставщики Новосибирска
+      </p>
+      <form class="form-horizontal proposal-form">
+        <p class="proposal-form-title">Я ищу</p>
+        <div class="form-group row checkbox-fbs-blocks">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">ЖБИ <span class="checkbox-help-block">
+                  ( фундаментальные блоки ФБС, плиты перекрытий ПК, перемычки)
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">Кирпич / Газобетон / Брус
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">Бетон / Раствор
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            в:
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Новосибирск и область<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Москва</a></li>
+              <li><a href="#">Питер</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDescription" class="col-sm-2 control-label proposal-form-label">Описание</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="inputDescription"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPhone" class="col-sm-2 control-label proposal-form-label">Телефон</label>
+          <div class="col-sm-4">
+            <input type="email" class="form-control" id="inputPhone">
+          </div>
+          <label for="inputName" class="col-sm-2 control-label proposal-form-label">Имя</label>
+          <div class="col-sm-4">
+            <input type="password" class="form-control" id="inputName">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="container-proposal-btn">
+            <button type="submit" class="btn btn-lg btn-round-lg btn-primary btn-outline proposal-btn">Опубликовать заявку</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="container-proposals col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+      <p class="proposals-title">Свежие заявки</p>
+      <div class="proposal-header">
+        <div class="proposal-section">
+          <p>раздел:&nbsp;&nbsp;</p>
+          <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Все<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">section 1</a></li>
+                <li><a href="#">section 1</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="proposal-region">
+            <p class="">регион:&nbsp;&nbsp;</p>
+            <div class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Новосибирск и область<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Питер</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr>
+        {% for _ in range(4) %}
+        {% include 'proposal.html' %}
+        {% endfor %}
+        <div class="proposal-all">
+          <a href="proposals.html" class="btn btn-lg btn-round-lg btn-primary btn-outline proposal-btn">Посмотреть все заявки</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-reviews">
+    <div class="reviews-block-align reviews-give-feedback"></div>
+    <i class="fa fa-3x fa-chevron-left reviews-arrow-left" aria-hidden="true"></i>
+    <div class="reviews-carousel col-xs-7 col-sm-6 col-md-5 col-lg-4">
+      {% for _ in range(3) %}
+      <div>
+        <div class="reviews-avatar"></div>
+        <p class="reviews-author">
+          Кирилл, 29 лет, г. Барабинск
+        </p>
+        <p class="reviews-text">
+          Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер!
+          Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер!
+          Бла-бла, мне помогло, все супер!
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+    <i class="fa fa-3x fa-chevron-left reviews-arrow-left-bottom" aria-hidden="true"></i>
+    <i class="fa fa-3x fa-chevron-right reviews-arrow-right" aria-hidden="true"></i>
+    <a class="reviews-give-feedback btn btn-default" href="#">Оставить отзыв</a>
+  </div>
+  <div class="container-give-feedback-bottom">
+    <a class="reviews-give-feedback-bottom btn btn-default" href="#">Оставить отзыв</a>
+  </div>
+
+  {% include 'footer.html' %}
+
+  {% endblock %}
+

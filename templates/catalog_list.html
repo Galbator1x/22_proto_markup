@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ЖБИ
+{% endblock %}
+
+{% block additional_css %}
+<link href="css/catalog.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class="navigation-links">
+  {% include 'logo.html' %}
+  <a href="index.html">Главная</a>
+  <i class="navigation-chevron"><i class="fa fa-chevron-right" aria-hidden="true"></i></i>
+  <a href="catalog_main.html">Каталог организаций</a>
+  <i class="navigation-chevron"><i class="fa fa-chevron-right" aria-hidden="true"></i></i>
+  <a href="#" class="inactive-link">ЖБИ</a>
+</div>
+
+<div class="container">
+  <div class="company-header col-md-offset-1 col-lg-offset-1 col-lg-9">
+    <h2>Производители и оптовые компании в Новосибирске и области</h2>
+    <h3>ЖБИ</h3>
+  </div>
+  <div class="companies col-lg-offset-1 col-lg-10 col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+    <a href="index.html#proposal-anchor" class="btn-send-proposal btn btn-lg btn-round-lg btn-primary btn-outline">Оставить заявку</a>
+    {% for _ in range(6) %}
+    <div class="company col-xs-12 col-sm-8 col-md-8 col-lg-7">
+      <div class="company-avatar"></div>
+      <p class="company-name">
+        <a href="company_detail.html">ООО Строй-Сервис-Монтаж</a>
+      </p>
+      <div class="company-info">
+        <p><b>Место деятельности:</b> Новосибирск</p>
+        <p><b>Продукция:</b> ЖБИ, бетон</p>
+        <p><b>Адрес:</b> Под часами, на том-же месте</p>
+        <p><b>Телефон:</b> 00-00-00</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="container-pagination col-xs-12 col-sm-8 col-md-8 col-lg-7">
+      <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li class="active"><a href = "#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </div>
+    <div class="link-send-proposal col-xs-12 col-sm-12">
+      <a href="index.html#proposal-anchor" class="">Оставить заявку</a>
+    </div>
+  </div>
+</div>
+
+
+{% include 'footer.html' %}
+{% endblock %}
